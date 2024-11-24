@@ -7,9 +7,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 const nxtWatch = express()
-nxtWatch.use(cors({
-    origin: "http://localhost:3000"
-}))
+nxtWatch.use(cors())
 nxtWatch.use(express.json())
 const videosDbPath = path.join(__dirname, 'videos.db')
 const videoDetailsDbPath = path.join(__dirname, 'video_details.db')
