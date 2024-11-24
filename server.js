@@ -137,4 +137,10 @@ nxtWatch.get('/videos/:id/', authenticateToken, async (request, response) => {
     response.send(videos)
 })
 
+nxtWatch.get('/showusers/', authenticateToken, async (request, response) => {
+    const query = `SELECT * FROM users;`
+    const users = await videosDb.all(query)
+    response.send(users)
+})
+
 
